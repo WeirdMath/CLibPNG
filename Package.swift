@@ -4,5 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "CLibPNG",
-    pkgConfig: "libpng"
+    pkgConfig: "libpng",
+    providers: [
+        .Brew("libpng"),
+        .Apt("libpng-dev")
+    ]
 )
